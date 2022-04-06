@@ -1,0 +1,28 @@
+{
+  "name": "dachcom-digital/typo3-social-data-youtube-connector",
+  "type": "typo3-cms-extension",
+  "description": "TYPO3 Social Data | Youtube Connector",
+  "authors": [
+    {
+      "name": "DACHCOM.DIGITAL AG Ben Walch",
+      "email": "bwalch@dachcom.ch",
+      "homepage": "https://www.dachcom.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.4",
+    "dachcom-digital/typo3-social-data": "*",
+    "google/apiclient": "^2.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "DachcomDigital\\SocialDataYoutube\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "social_data_youtube"
+    }
+  }
+}

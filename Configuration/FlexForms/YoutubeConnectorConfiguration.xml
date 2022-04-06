@@ -1,0 +1,57 @@
+<T3DataStructure>
+    <ROOT>
+        <type>array</type>
+        <el>
+            <api_key>
+                <TCEforms>
+                    <label>API Key</label>
+                    <config>
+                        <type>input</type>
+                    </config>
+                </TCEforms>
+            </api_key>
+            <fetch_type>
+                <TCEforms>
+                    <onChange>reload</onChange>
+                    <label>Fetch type</label>
+                    <config>
+                        <type>radio</type>
+                        <items type="array">
+                            <numIndex index="0" type="array">
+                                <numIndex index="0">
+                                    channel
+                                </numIndex>
+                                <numIndex index="1">channel</numIndex>
+                            </numIndex>
+                            <numIndex index="1" type="array">
+                                <numIndex index="0">
+                                    playlist
+                                </numIndex>
+                                <numIndex index="1">playlist</numIndex>
+                            </numIndex>
+                        </items>
+                        <default>channel</default>
+                    </config>
+                </TCEforms>
+            </fetch_type>
+            <channel_id>
+                <TCEforms>
+                    <displayCond>FIELD:fetch_type:=:channel</displayCond>
+                    <label>Channel ID</label>
+                    <config>
+                        <type>input</type>
+                    </config>
+                </TCEforms>
+            </channel_id>
+            <playlist_id>
+                <TCEforms>
+                    <displayCond>FIELD:fetch_type:=:playlist</displayCond>
+                    <label>Playlist ID</label>
+                    <config>
+                        <type>input</type>
+                    </config>
+                </TCEforms>
+            </playlist_id>
+        </el>
+    </ROOT>
+</T3DataStructure>

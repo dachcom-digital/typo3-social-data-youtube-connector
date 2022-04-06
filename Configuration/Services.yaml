@@ -1,0 +1,16 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    DachcomDigital\SocialDataYoutube\:
+        resource: '../Classes/*'
+        exclude: '../Classes/{DependencyInjection,Domain/Model,Event}/*'
+
+    DachcomDigital\SocialDataYoutube\Connector\YoutubeConnectorDefinition:
+        tags:
+            - name: social_data.connector_definition
+              identifier: youtube
+              connector: DachcomDigital\SocialDataYoutube\Connector\YoutubeConnector
+
